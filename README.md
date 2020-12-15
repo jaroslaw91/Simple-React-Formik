@@ -1,7 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/80cc40a0-d7b9-44f4-8e2e-a8406cb08c4a/deploy-status)](https://app.netlify.com/sites/simple-react-formik/deploys)
 
-# Landingi-Recruitment-Task
-Simple react-formik.
+# Simple react-formik
+Exercise: Simple react-formik.
 
 ## Description
 Exercise.
