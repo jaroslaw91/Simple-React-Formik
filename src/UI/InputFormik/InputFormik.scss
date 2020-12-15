@@ -1,0 +1,73 @@
+@keyframes visible {
+    from {
+        opacity: 0;
+        transform:translateY(0);
+        z-index: 0;
+    }
+    to {
+        opacity: 100;
+        transform:translateY(-35px);
+        z-index: 1;
+    }
+}
+
+@keyframes invisible {
+    from {
+        opacity: 100;  
+        transform:translateY(-35px);
+        z-index: 1;
+    }
+    to {
+        opacity: 0;
+        transform:translateY(0);
+        z-index: 0;
+    }
+}
+
+.input {
+    margin-bottom: 10px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .label {
+        padding: 5px 15px;
+        color: #3744B8;
+        font-weight: 600;
+        position: absolute;
+        z-index: -1;
+
+        &-true {
+            opacity: 100;
+            transform: translateY(-35px);
+            animation-name: visible;
+            animation-duration: .5s;
+        }
+        &-false {
+            opacity: 0;
+            transform: translateY(0);
+            animation-name: invisible;
+            animation-duration: .2s;
+        }
+    }
+
+    input {
+        outline: none;
+        padding: 10px 15px;
+        border: 1px solid #1D1C1C;
+        border-radius: 8px;
+        font-size: 18px;
+        color: #1D1C1C;
+
+        &:focus {
+            border: 2px solid #1D1C1C;
+        }
+    }
+}
+
+.error {
+    padding: 0 15px;
+    font-size: 14px;    
+    color: #E50C3A;
+}

@@ -1,36 +1,40 @@
 import React from 'react'
+import { Formik } from 'formik'
 
 import './App.scss'
-import Form from './UI/Form'
+import { formSchema } from './Formik/formSchema'
+import FormFormik from './UI/FormFormik'
 import Heading from './UI/Heading'
-import Input from './UI/Input'
+import InputFormik from './UI/InputFormik'
 import TwoButtons from './UI/TwoButtons'
 
 function App() {
-  const handleSubmit = () => {
-
-  }
-
   return (
     <main>
-      <Form handleSubmit={handleSubmit}>
-        <Heading text='Simple react-formik' />
-        <Input
-          name='name'
-          label='Name*' />
-        <Input
-          name='surname'
-          label='Surname*' />
-        <Input
-          type='email'
-          name='email'
-          label='Email*' />
-        <Input
-          name='age'
-          label='Age' />
-        <TwoButtons />
-      </Form>
-    </main>
+      <Formik
+        initialValues={{
+          firstName: '',
+          lastName: '',
+          email: '',
+          age: ''
+        }}
+        validationSchema={formSchema}
+        onSubmit={values => {
+          alert('Form send!')
+        }}
+      >
+        {() => (
+          <FormFormik>
+            <Heading text='Simple react-formik' />
+            <InputFormik name="firstName" type="text" label="First name*" />
+            <InputFormik name="lastName" type="text" label="Last name*" />
+            <InputFormik name="email" type="text" label="Email*" />
+            <InputFormik name="age" type="text" label="Age" />
+            <TwoButtons />
+          </FormFormik>
+        )}
+      </Formik>
+    </main >
   )
 }
 

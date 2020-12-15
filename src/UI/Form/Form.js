@@ -9,14 +9,16 @@ const Form = ({
 }) => {
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form
+            className='form'
+            onSubmit={handleSubmit}>
             {children}
         </form>
     )
 }
 
 Form.propTypes = {
-    handleSubmit: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func,
     children: PropTypes.array.isRequired
 }
 

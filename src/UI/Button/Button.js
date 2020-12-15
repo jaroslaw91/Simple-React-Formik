@@ -9,11 +9,11 @@ const Button = ({
     text
 }) => {
     return (
-        <div
+        <button
             type={type}
             className={`btn btn-${styles}`}>
             {text}
-        </div>
+        </button>
     )
 }
 
