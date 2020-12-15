@@ -1,0 +1,25 @@
+.btn {
+    cursor: pointer;
+    padding: 10px 40px;
+    font-size: 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+
+    &-primary {
+        background-color: #323EA7;
+        color: #FFF;
+        
+        &:hover {
+            background-color: #3744B8;
+        }
+    }
+
+    &-secondary {
+        color: #323EA7;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
