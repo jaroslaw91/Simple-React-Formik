@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Simple react-formik",
+  "name": "Simple react-formik",
   "icons": [
     {
       "src": "favicon.ico",
