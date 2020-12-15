@@ -9,11 +9,11 @@ const TwoButtons = ({ textPrimary, textSecondary }) => {
         <div className='two-buttons'>
             <Button
                 text={textSecondary}
-                style='secondary' />
+                styles='secondary' />
             <Button
                 type='submit'
                 text={textPrimary}
-                style='primary' />
+                styles='primary' />
         </div>
     )
 }

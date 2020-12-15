@@ -5,13 +5,13 @@ import './Button.scss'
 
 const Button = ({
     type,
-    style,
+    styles,
     text
 }) => {
     return (
         <div
             type={type}
-            className={`btn btn-${style}`}>
+            className={`btn btn-${styles}`}>
             {text}
         </div>
     )
@@ -24,7 +24,7 @@ Button.defaultProps = {
 
 Button.propTypes = {
     type: PropTypes.string,
-    style: PropTypes.string,
+    styles: PropTypes.string,
     text: PropTypes.string.isRequired
 }
 
