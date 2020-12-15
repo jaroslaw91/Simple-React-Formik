@@ -1,0 +1,40 @@
+.modal {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    z-index: 5;
+
+    &-true {
+        display: block;
+    }
+
+    &-false {
+        display: none;
+    }
+
+    &-content {
+        margin: 150px auto;
+        padding: 50px;
+        width: 600px;
+        background-color: #FFF;
+        border-radius: 8px;
+        -webkit-box-shadow: 8px 8px 28px -2px rgba(50,62,167,0.18);
+        -moz-box-shadow: 8px 8px 28px -2px rgba(50,62,167,0.18);
+        box-shadow: 8px 8px 28px -2px rgba(50,62,167,0.18);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        p {
+            margin: 20px 10px;
+            font-size: 22px;
+            font-weight: 600;
+            color: #323EA7;
+            text-align: center;
+        }
+    }
+}

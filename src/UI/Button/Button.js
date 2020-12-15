@@ -6,12 +6,14 @@ import './Button.scss'
 const Button = ({
     type,
     styles,
-    text
+    text,
+    onClick
 }) => {
     return (
         <button
             type={type}
-            className={`btn btn-${styles}`}>
+            className={`btn btn-${styles}`}
+            onClick={onClick}>
             {text}
         </button>
     )
@@ -25,7 +27,8 @@ Button.defaultProps = {
 Button.propTypes = {
     type: PropTypes.string,
     styles: PropTypes.string,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    onClick: PropTypes.func
 }
 
 export default Button
