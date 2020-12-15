@@ -9,7 +9,7 @@ const InputFormik = ({
     ...props
 }) => {
     const [display, setDisplay] = useState(false)
-    const [field, meta, helpers] = useField(props)
+    const [field, meta] = useField(props)
 
     const onLabelDispaly = event => {
         const value = event.target.value
